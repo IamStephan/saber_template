@@ -1,0 +1,49 @@
+<section class="services-section space-section">
+  <each
+    loop='item in [
+    {
+      title: "Foundation Repair",
+      description: "We will find the right solution for your foundation problems.",
+      img: "https://cdn.treehouseinternetgroup.com/cms_images/300/srv-img-foundation-repair.jpg"
+    },
+    {
+      title: "Concrete Lifting",
+      description: "Quickly & effectively stabilize your sinking, settling concrete!",
+      img: "https://cdn.treehouseinternetgroup.com/cms_images/300/srv-img-concrete.jpg"
+    },
+    {
+      title: "Crawl Space Repair",
+      description: "We offer complete crawl space encapsulation & repair services.",
+      img: "https://cdn.treehouseinternetgroup.com/cms_images/300/srv-img-crawlspace.jpg"
+    },
+    {
+      title: "Seawall & Bulkhead Repair",
+      description: "Stabilize seawalls & bulkheads with our non-invasive, durable repair services.",
+      img: "https://cdn.treehouseinternetgroup.com/cms_images/300/seawall-bulkhead-repair.png"
+    },
+    {
+      title: "Seismic Retrofitting",
+      description: "Reduce the risk of earthquake damage with professional reinforcements.",
+      img: "https://d6449bb3dc657045bfc9-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/300/srv-img-retrofitting.jpg"
+    },
+    {
+      title: "Commercial Foundation",
+      description: "We offer proven solutions for existing structures and properties.",
+      img: "https://cdn.treehouseinternetgroup.com/cms_images/300/srv-img-commercial.jpg"
+    },
+  ]'
+  >
+    <div class="item" tabindex="0">
+      <div class="item-showcase">
+        <img src="{{ item.img }}" class="item-showcase-img" />
+      </div>
+      <div class="item-content">
+        <h3 class="item-content-title">{{ item.title }}</h3>
+        <p class="item-content-body">{{ item.description }}</p>
+        <div class="item-content-action">
+          <a class="button"> Learn more </a>
+        </div>
+      </div>
+    </div>
+  </each>
+</section>

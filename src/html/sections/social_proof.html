@@ -1,0 +1,42 @@
+<section class="social-proof space-section">
+  <div class="social-proof-header">
+    <h2 class="title">
+      <span>Saber Foundation Repair</span>
+      <br />
+      <span>Reviews and Ratings</span>
+    </h2>
+  </div>
+
+  <div class="social-proof-ratings">
+    <each loop="item in [1,2,3]">
+      <div class="rating-item">
+        <div class="rating-stars">
+          <each loop="item in [1,2,3,4,5]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="rating"
+            >
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path
+                fill="currentColor"
+                d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+              />
+            </svg>
+          </each>
+        </div>
+
+        <div class="rating-content">
+          <div class="rating-content-body">
+            "Would give Alvin and his crew 10 stars if possible!"
+          </div>
+          <div class="rating-content-client">Charles F from San Pedro, CA</div>
+        </div>
+      </div>
+    </each>
+  </div>
+
+  <div class="social-proof-action">
+    <a class="button">View More Reviews</a>
+  </div>
+</section>

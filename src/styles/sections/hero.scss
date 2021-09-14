@@ -1,0 +1,138 @@
+@import "../utils/calculate_fraction_width.func.scss";
+@import "../utils/breakpoints.vars.scss";
+
+.hero {
+  @apply max-w-[1700px] mx-auto px-8 mt-12 grid grid-cols-[4fr,3fr]
+    xl:px-0 xl:grid-cols-1 sm:mt-8;
+
+  .hero-showcase {
+    @apply relative mr-28
+      xl:hidden;
+
+    img {
+      @apply absolute inset-0 w-full h-full object-cover rounded-sm;
+      box-shadow: 0px 3px 50px #0000007c;
+    }
+  }
+
+  .hero-content {
+    .hero-content-header {
+      @apply mb-16
+        xl:px-8
+        sm:mb-8;
+
+      .title {
+        @apply font-bold text-4xl
+          md:text-2xl
+          sm:text-xl;
+
+        span:last-of-type {
+          @apply relative;
+
+          &::after {
+            @apply absolute -bottom-10 left-0 h-2 w-1/2 bg-primary
+              md:-bottom-8
+              sm:-bottom-4;
+            transform: skewX(30deg);
+            content: "";
+          }
+        }
+      }
+    }
+
+    .hero-content-showcase {
+      @apply aspect-h-6 aspect-w-16 z-[-10]
+        min-xl:hidden
+        sm:aspect-h-10 sm:aspect-w-16;
+      margin-bottom: -25%;
+
+      img {
+        @apply object-cover;
+      }
+    }
+
+    .hero-main {
+      @apply rounded-sm bg-white
+        xl:max-w-xl min-xl:mx-auto xl:flex xl:flex-col xl:px-6 xl:py-4 xl:mb-8
+        xl:mx-8;
+
+      @screen xl {
+        box-shadow: 0px 3px 24px #00000029;
+      }
+
+      .hero-slogan {
+        @apply font-medium text-xl mb-8
+          sm:text-base sm:mb-6;
+      }
+
+      .hero-features {
+        @apply grid grid-cols-2 gap-4 mb-8
+          sm:grid-cols-1 sm:mb-4;
+
+        .list {
+          @screen sm {
+            &:nth-child(2) {
+              @apply hidden;
+            }
+          }
+
+          .list-item {
+            @apply underline font-bold text-lg mb-4 relative pl-10
+              xl:text-base
+              sm:text-sm sm:pl-6 sm:mb-3;
+
+            &::before {
+              content: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M8 6.41421L9.4142 5L16.4853 12.071L9.4142 19.1421L8 17.7279L13.6569 12.071L8 6.41421Z' fill='white' /%3E%3C/svg%3E");
+              @apply bg-primary w-7 h-7 rounded-full absolute left-0 p-0.5
+                sm:w-5 sm:h-5;
+            }
+          }
+        }
+      }
+
+      .hero-action {
+        @apply mb-8
+          sm:mb-0;
+
+        .button.button {
+          @apply px-20 py-4
+            xl:block
+            sm:px-12;
+        }
+      }
+    }
+
+    .hero-refer-wrapper {
+      @apply flex justify-start
+        xl:justify-center;
+
+      .hero-refer {
+        @apply border border-primary p-8 rounded-full inline-block relative
+          sm:px-6 sm:pt-4 sm:pb-6;
+
+        box-shadow: 0px 6px 15px #00000029;
+
+        .refer-heading {
+          @apply text-primary font-bold text-xl text-center
+            sm:text-base;
+        }
+
+        .refer-text {
+          @apply text-primary font-medium text-center
+            sm:text-sm;
+        }
+
+        .refer-action {
+          @apply absolute w-12 h-12 bg-primary rounded-full bottom-0 left-1/2 transform translate-y-1/2 -translate-x-1/2
+            sm:w-8 sm:h-8;
+
+          &::before {
+            content: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M8 6.41421L9.4142 5L16.4853 12.071L9.4142 19.1421L8 17.7279L13.6569 12.071L8 6.41421Z' fill='white' /%3E%3C/svg%3E");
+            @apply w-8 h-8 absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2
+              sm:w-6 sm:h-6;
+          }
+        }
+      }
+    }
+  }
+}

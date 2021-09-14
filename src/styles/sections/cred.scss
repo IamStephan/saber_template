@@ -1,0 +1,48 @@
+.cred-section {
+  @apply max-w-screen-2xl mx-auto px-8 overflow-hidden relative;
+
+  .cred-controls-container {
+    @apply absolute inset-0 flex justify-between items-center px-8 z-[1];
+
+    .control {
+      @apply w-10 h-10 rounded-full bg-gray-300 p-2 active:outline-none focus-within:outline-none;
+
+      &::before {
+        content: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M8 6.41421L9.4142 5L16.4853 12.071L9.4142 19.1421L8 17.7279L13.6569 12.071L8 6.41421Z' fill='black' /%3E%3C/svg%3E");
+      }
+
+      &.prev-control {
+        @apply transform rotate-180;
+      }
+    }
+  }
+
+  .cred-wrapper {
+    @apply overflow-hidden max-w-screen-xl mx-auto;
+
+    .cred-container {
+      @apply flex;
+
+      .cred-slide {
+        @apply relative select-none cursor-pointer h-24;
+        flex: 0 0 25%;
+
+        @screen lg {
+          flex: 0 0 33%;
+        }
+
+        @screen md {
+          flex: 0 0 50%;
+        }
+
+        @screen sm {
+          flex: 0 0 100%;
+        }
+
+        .cred-img {
+          @apply absolute inset-0 w-full h-full object-contain;
+        }
+      }
+    }
+  }
+}

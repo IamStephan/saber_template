@@ -1,0 +1,47 @@
+@import "../utils/variables.scss";
+
+.services-section {
+  @apply max-w-screen-2xl mx-auto px-8 grid grid-cols-3 gap-16
+    xl:grid-cols-2
+    md:gap-4
+    sm:grid-cols-1;
+
+  .item {
+    box-shadow: 0px 3px 34px #0000003b;
+    @apply rounded-[#{$border-radius-xl}] py-[#{$border-radius-xl}]
+      md:rounded-[#{$border-radius-md}] md:py-[#{$border-radius-md}]
+      sm:pb-3;
+
+    .item-showcase {
+      @apply h-44 relative
+        md:h-28;
+
+      .item-showcase-img {
+        @apply absolute inset-0 w-full h-full object-cover;
+      }
+    }
+
+    .item-content {
+      @apply px-12 pt-6
+        md:px-4 sm:py-3;
+
+      .item-content-title {
+        @apply font-bold text-xl line-clamp-1 mb-4
+          sm:text-lg sm:mb-2;
+      }
+
+      .item-content-body {
+        @apply font-medium text-lg mb-10 line-clamp-2
+          sm:text-sm sm:mb-6;
+      }
+
+      .item-content-action {
+        .button {
+          @apply text-white bg-black hover:bg-primary hover:opacity-100
+            md:text-xs
+            sm:px-6 sm:text-sm sm:py-3;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.content-template-header {
+  @apply relative;
+
+  &.space-section {
+    @apply mb-6;
+  }
+
+  .bg-container {
+    @apply absolute inset-0 z-[-2];
+
+    .bg-img {
+      .img {
+        @apply absolute inset-0 w-full h-full object-cover;
+      }
+    }
+
+    .bg-overlay {
+      @apply absolute inset-0;
+      background: transparent
+        linear-gradient(268deg, #ec1e24b5 0%, #000000b0 100%) 0% 0% no-repeat
+        padding-box;
+    }
+  }
+
+  .template-header-title {
+    @apply max-w-screen-xl mx-auto px-8 pb-6 pt-32 z-[2];
+
+    h1 {
+      @apply text-white text-3xl font-bold;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+.service-areas {
+  @apply relative p-12
+    sm:px-4;
+
+  .bg-background {
+    @apply absolute inset-x-0 top-0 h-[70%] bg-gray-50 z-[-1];
+  }
+
+  .service-area-wrapper {
+    @apply grid grid-cols-[5fr,7fr] grid-rows-[75px,auto,75px] z-[2] max-w-screen-xl mx-auto w-auto
+      xl:grid-cols-[1fr,1fr]
+      lg:grid-cols-1 lg:grid-rows-[auto,auto];
+
+    .service-area-list {
+      @apply bg-white px-20 pt-16 pb-14 rounded-[51px] shadow-2xl self-center row-start-2 mr-16
+        lg:mr-0 lg:row-start-1 lg:mb-8
+        sm:px-6 sm:py-6 sm:rounded-2xl;
+
+      .service-area-list-content {
+        .service-area-title {
+          @apply text-primary font-bold text-3xl capitalize mb-6
+            sm:mb-3;
+        }
+      }
+
+      // Content I cannot controll
+      // =======================================================
+      h3 {
+        @apply font-medium text-lg mb-6
+          sm:mb-3;
+      }
+
+      .city_scroll_list_content {
+        @apply max-h-64 overflow-auto mb-6
+          sm:mb-3;
+
+        &::-webkit-scrollbar {
+          @apply w-4;
+        }
+
+        &::-webkit-scrollbar-track {
+          @apply bg-[#F8F8F8] rounded-full;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          @apply bg-[#E8E8E8] rounded-full;
+        }
+
+        .city_scroll_list {
+          @apply ml-4 mb-6
+            sm:mb-3 sm:ml-2;
+
+          li {
+            @apply font-medium mb-0.5;
+          }
+
+          a {
+            @apply underline;
+          }
+        }
+        .city_scroll_list_local_phone {
+          @apply text-sm;
+        }
+      }
+
+      .city_scroll_list_footer {
+        a {
+          @apply text-white bg-black py-4 px-6 inline-block rounded-full text-sm font-bold;
+        }
+      }
+      // =======================================================
+    }
+
+    .service-area-map {
+      @apply ml-16 relative row-start-1 row-end-4
+        lg:ml-0 lg:row-start-2 lg:mt-8;
+
+      a {
+        @apply absolute inset-0
+          lg:static;
+
+        img {
+          @apply absolute w-full h-full object-contain
+            lg:static lg:h-auto;
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}

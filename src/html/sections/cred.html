@@ -1,0 +1,58 @@
+<section class="cred-section space-section">
+  <div class="cred-controls-container">
+    <button class="prev-control control"></button>
+    <button class="next-control control"></button>
+  </div>
+  <div class="cred-wrapper carousel">
+    <div class="cred-container">
+      <each
+        loop="item in [
+        {
+          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/58e2c31ae2dc7_carlsbad-chamber-of-commerce-logo-1.png',
+          'alt': 'Carlsbad Chamber of Commerce'
+        },
+        {
+          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/5ca281c55f31f_sfs-chamber-large.jpg',
+          'alt': 'Santa Fe Springs Chamber of Commerce'
+        },
+        {
+          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/5c6ee99c46617_ebb-logo-002.png',
+          'alt': 'Earthquake Brace + Bolt'
+        },
+        {
+          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/5c6eea0769d98_sdar-square-002.jpg',
+          'alt': 'San Diego Association of Realtors'
+        },
+        {
+          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/5c6eeb11e3383_ocar-logo-002.jpg',
+          'alt': 'Orange County Realtors Association of Professionals'
+        },
+        {
+          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/5c6ef39a215a1_bbb-logo-002.png',
+          'alt': 'Better Business Bureau'
+        },
+        {
+          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/59108df723790_tbs-logo.png',
+          'alt': 'Basement Systems Certified Dealer Network Member'
+        },
+        {
+          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/59108c8ec5ae4_supportworks-logo.jpg',
+          'alt': 'Supportworks Dealer Member'
+        },
+        {
+          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/59108d70c9d24_cleanspace-badge.png',
+          'alt': 'Certified CleanSpace Dealer'
+        },
+        {
+          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/1404.jpg',
+          'alt': 'Dun & Bradstreet Credibility Corp.'
+        }
+      ]"
+      >
+        <div class="cred-slide">
+          <img class="cred-img" src="{{ item.url }}" alt="{{ item.alt }}" />
+        </div>
+      </each>
+    </div>
+  </div>
+</section>

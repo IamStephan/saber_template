@@ -1,0 +1,81 @@
+.before-after-section {
+  @apply max-w-screen-2xl mx-auto px-8;
+
+  .before-after-header-container {
+    .header {
+      @apply text-center font-bold text-3xl
+        md:text-2xl
+        sm:text-xl;
+    }
+  }
+
+  .before-after-carousal-wrapper {
+    @apply relative;
+
+    .before-after-controls-container {
+      @apply absolute inset-0 flex justify-between items-center px-8 z-[1]
+        sm:px-0 sm:-mx-4;
+
+      .control {
+        @apply w-10 h-10 rounded-full bg-primary p-2 active:outline-none focus-within:outline-none;
+
+        &::before {
+          content: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M8 6.41421L9.4142 5L16.4853 12.071L9.4142 19.1421L8 17.7279L13.6569 12.071L8 6.41421Z' fill='white' /%3E%3C/svg%3E");
+        }
+
+        &.prev-control {
+          @apply transform rotate-180;
+        }
+      }
+    }
+
+    .before-after-wrapper {
+      @apply overflow-hidden max-w-screen-xl mx-auto px-8
+        sm:px-0;
+
+      .before-after-container {
+        @apply flex;
+
+        .before-after-slide {
+          @apply relative select-none cursor-pointer px-14 py-20
+            sm:px-0 sm:py-8;
+          flex: 0 0 50%;
+
+          @screen md {
+            flex: 0 0 100%;
+          }
+
+          .before-after-slide-content {
+            @apply aspect-w-16 aspect-h-12;
+            box-shadow: 0px 3px 74px #0000002b;
+
+            @screen sm {
+              box-shadow: none;
+            }
+
+            .before-after-slide-body {
+              @apply grid grid-cols-2;
+
+              .slide-showcase {
+                @apply relative;
+
+                img {
+                  @apply absolute inset-0 w-full h-full object-cover;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .before-after-action-container {
+    @apply flex justify-center;
+
+    .button.button {
+      @apply bg-black hover:bg-primary hover:opacity-100
+        sm:text-sm sm:px-6;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.footer {
+  @apply bg-black text-gray-400 py-10;
+
+  .row {
+    > div:first-child {
+      @apply border-l border-gray-400;
+
+      @screen lg {
+        @apply border-b border-gray-400 border-l-0;
+      }
+    }
+  }
+
+  #footer-contact {
+    @apply flex flex-col items-center
+      lg:mt-12;
+
+    #footer-btn {
+      @apply text-lg capitalize px-16 py-4 mb-6;
+    }
+
+    .footer-phone {
+      @apply text-center mb-6;
+
+      span {
+        @apply block;
+      }
+
+      .phone_link {
+        @apply text-3xl font-bold hover:underline text-center;
+      }
+    }
+
+    p.footer-address {
+      @apply mb-6;
+      span.footer-address {
+        @apply text-center block;
+
+        // Hide the second br (why is ths even there?)
+        & + br + br {
+          @apply hidden;
+        }
+      }
+    }
+  }
+
+  #footer-links {
+    @apply pl-[55px] pt-[20px]
+      lg:mb-5 lg:p-0 lg:mx-auto lg:max-w-[500px];
+
+    // Main Container for the category
+    > ul {
+      // The category title
+      > .footer-link {
+        @apply uppercase font-bold w-1/2 float-left
+          sm:float-none sm:w-full sm:text-center;
+
+        &:first-of-type {
+          @apply w-full;
+
+          ul {
+            columns: 2;
+
+            @screen sm {
+              columns: 1;
+            }
+          }
+        }
+
+        ul {
+          @apply mb-6
+            sm:flex sm:flex-col sm:items-center sm:text-center;
+
+          li {
+            @apply capitalize font-normal py-0.5 text-sm hover:underline;
+          }
+        }
+      }
+    }
+
+    #social-footer-icons {
+      @apply flex space-x-4 clear-both
+        sm:justify-center;
+    }
+  }
+}
