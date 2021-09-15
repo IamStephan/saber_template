@@ -8,6 +8,7 @@
     "parcel:serve": "parcel serve src/html/pages/*.html",
     "parcel:watch": "parcel watch src/html/pages/*.html",
     "parcel:build": "parcel build src/html/pages/*.html",
+    "tools:generate": "node ./tools/generate_project/index.js",
     "clean": "rm -rf dist .parcel-cache",
     "build": "npm-run-all -s clean parcel:build",
     "start": "npm-run-all -s clean -p parcel:serve",
