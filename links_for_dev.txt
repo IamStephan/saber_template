@@ -1,3 +1,11 @@
+# Design spec
 https://xd.adobe.com/view/335a26f0-ce76-4a95-bced-c12f2487d40a-6609/
 
+# Actuall website
 https://www.saberfoundations.com/
+
+# Test Files
+http://devtest155.basementsite.com/?dev_template=0&dev_content=0&cache=0
+
+# Used to generate links
+https://combinatronics.com/
