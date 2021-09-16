@@ -6,21 +6,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>[[title]]</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="http://images.suredrybasements.com/101/Sure_Dry_Circle_Only.png">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800;900&display=swap"
-      rel="stylesheet" />
-
-    <!-- Some Basic SEO -->
-    <meta property="og:site_name" content="Sure-Dry Basement Systems" />
-    <meta property="og:description"
-      content="Sure Dry Basement Systems is the Basement Systems dealer in Wausau, Marshfield, Oshkosh, Appleton, Green Bay, Rhinelander, and Ashland areas." />
+    <meta name="description" content="[[description]]">
+    <meta name="keywords" content="[[keywords]]">
 
     [[top-inject]]
   </head>
@@ -41,10 +33,13 @@
         [[top-nav-links]]
 
         <div class="logo-container">
-          <img
-            class="object-contain- object-left- img"
-            src="https://cdn.treehouseinternetgroup.com/cms_images/755/logo.png"
-          />
+          <a href='/'>
+            <img
+              class="object-contain- object-left- img"
+              src="https://cdn.treehouseinternetgroup.com/cms_images/755/logo.png"
+            />
+          </a>
+          
         </div>
       </section>
     </nav>
@@ -90,7 +85,7 @@
             </div>
 
             <div class="hero-action">
-              <a class="button">Free Estimate</a>
+              <a class="button" href='/free-estimate.html'>Free Estimate</a>
             </div>
           </div>
 
@@ -501,13 +496,13 @@
       <section
         class="content-template-article space-section <?= $siteConfig->showSilo ? "" : 'no-silo'; ?> <?= $siteConfig->showBreadcrumbs ? "" : 'no-breadcrumbs'; ?>"
       >
-        <? if($siteConfig->showSilo): ?>
+        <? if($siteConfig->showBreadcrumbs): ?>
         <nav aria-label="Breadcrumb" class="content-template-breadcrumbs">
           [[breadcrumbs]]
         </nav>
         <? endif; ?>
 
-        <? if($siteConfig->showBreadcrumbs) ?>
+        <? if($siteConfig->showSilo) ?>
         <aside class="content-template-silo">
           <div class="content-template-silo-menu">
             <button id="silo-menu-button">
