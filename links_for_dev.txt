@@ -9,3 +9,7 @@ http://devtest155.basementsite.com/?dev_template=0&dev_content=0&cache=0
 
 # Used to generate links
 https://combinatronics.com/
+
+# Style Guide
+https://th-design-system.netlify.app/docs/build/supernav.html#pjax-container  <-- OLD
+https://th-designbook.netlify.app/?path=/story/development-tools-hub-sites--page <-- NEW
