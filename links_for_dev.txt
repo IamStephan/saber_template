@@ -13,3 +13,7 @@ https://combinatronics.com/
 # Style Guide
 https://th-design-system.netlify.app/docs/build/supernav.html#pjax-container  <-- OLD
 https://th-designbook.netlify.app/?path=/story/development-tools-hub-sites--page <-- NEW
+
+# Dev Env
+http://www.bsiadmin.com/standalone/custom_template_editor/
+http://www.bsiadmin.com/standalone/custom_template_editor/super_nav.php
