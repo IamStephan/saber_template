@@ -477,21 +477,20 @@
       </section>
 
       <? elseif($siteConfig->pageType === "CONTENT"): ?>
+      <? if($siteConfig->showContentHeader): ?>
       <section class="content-template-header space-section">
         <div class="bg-container">
           <div class="bg-img">
-            <img
-              src="https://cdn.treehouseinternetgroup.com/cms_images/755/hands-1.png"
-              class="img object-cover-"
-            />
+            [[content-header-img]]
           </div>
           <div class="bg-overlay"></div>
         </div>
 
         <div class="template-header-title">
-          <h1>Concrete Leveling & Lifting</h1>
+          <h1>[[content-header-title]]</h1>
         </div>
       </section>
+      <? endif; ?>
 
       <section
         class="content-template-article space-section <?= $siteConfig->showSilo ? "" : 'no-silo'; ?> <?= $siteConfig->showBreadcrumbs ? "" : 'no-breadcrumbs'; ?>"
