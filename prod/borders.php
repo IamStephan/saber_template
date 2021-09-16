@@ -502,7 +502,7 @@
         </nav>
         <? endif; ?>
 
-        <? if($siteConfig->showSilo) ?>
+        <? if($siteConfig->showSilo): ?>
         <aside class="content-template-silo">
           <div class="content-template-silo-menu">
             <button id="silo-menu-button">
@@ -527,6 +527,7 @@
             [[single_silo_nav]]
           </div>
         </aside>
+        <? endif; ?>
 
         <article class="content-template-main">
           <? endif; ?>

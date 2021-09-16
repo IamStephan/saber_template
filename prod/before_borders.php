@@ -48,8 +48,12 @@
     );
 
     private $prodLinks = array(
-      "favicon.ico" => "https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/300/favicon.ico"
-    )
+      "favicon.ico" => "https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/300/favicon.ico",
+
+      // Fonts
+      "fonts.preconnect" => "https://fonts.gstatic.com",
+      "fonts.css" => "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800;900&display=swap"
+    );
 
     public $pageType;
     public $isCityPage;
@@ -148,6 +152,10 @@
       // Insert CSS reset
       $topData .= $this->generateLinkTag($this->devLinks['global.css']);
 
+      // Insert fonts
+      $topData .= $this->generateLinkTag($this->prodLinks['fonts.preconnect'], "preconnect");
+      $topData .= $this->generateLinkTag($this->prodLinks['fonts.css'], "stylesheet");
+
       // Page type based injection
       switch($this->pageType) { 
         case "HOME": {
@@ -171,11 +179,6 @@
     private function create_BottomInject_token() {
       $bottomData = "";
 
-      // Insert dev_tools reset
-      if($this->isDevelopment) {
-        $bottomData .= $this->generateScriptTag($this->devLinks['dev_tools.js']);
-      }
-      
       // Page type based injection
       switch($this->pageType) { 
         case "HOME": {
@@ -191,6 +194,11 @@
         default: {
           $bottomData .= $this->generateScriptTag($this->devLinks['content.js']);
         }
+      }
+
+      // Insert dev_tools reset
+      if($this->isDevelopment) {
+        $bottomData .= $this->generateScriptTag($this->devLinks['dev_tools.js']);
       }
 
       $this->siteTokens['[[bottom-inject]]'] = $bottomData;
