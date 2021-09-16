@@ -2,7 +2,8 @@
   @apply col-start-3 col-end-4 row-start-2 row-end-3 py-2 flex flex-col justify-center;
 
   .level-1.large {
-    @apply flex justify-between md:hidden;
+    @apply flex justify-end md:hidden space-x-16
+      lg:space-x-8;
 
     > li {
       @apply font-semibold relative py-4 lg:text-sm;
@@ -15,8 +16,11 @@
         // @apply hover:underline;
       }
 
-      &.free-estimate a {
-        @apply bg-primary px-12 py-4 font-bold text-white rounded-full rounded-tl-none;
+      &.free-estimate {
+        flex-shrink: 0;
+        a {
+          @apply bg-primary px-12 py-4 font-bold text-white rounded-full rounded-tl-none;
+        }
       }
 
       &.with-children {
@@ -33,7 +37,7 @@
         }
 
         .level-2 {
-          @apply hidden absolute bottom-0 left-1/2 transform translate-y-full -translate-x-1/2 bg-white py-4 px-6 rounded-md shadow-2xl ring-1 ring-gray-900 ring-opacity-10;
+          @apply hidden absolute bottom-0 left-1/2 transform translate-y-full -translate-x-1/2 bg-white py-4 px-6 shadow-2xl ring-1 ring-gray-900 ring-opacity-10;
 
           > li {
             @apply font-bold whitespace-nowrap;

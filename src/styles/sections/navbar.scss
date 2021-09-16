@@ -6,12 +6,12 @@
   display: grid;
   grid-template-columns:
     minmax(theme("spacing.8"), auto) minmax(
-      calculateFractionWidth(0.4, $screen-lg),
-      calculateFractionWidth(0.4, $screen-2xl)
+      calculateFractionWidth(0.2, $screen-lg),
+      calculateFractionWidth(0.2, $screen-2xl)
     )
     minmax(
-      calculateFractionWidth(0.6, $screen-lg),
-      calculateFractionWidth(0.6, $screen-2xl)
+      calculateFractionWidth(0.8, $screen-lg),
+      calculateFractionWidth(0.8, $screen-2xl)
     )
     minmax(theme("spacing.8"), auto);
   grid-template-rows: auto auto;
