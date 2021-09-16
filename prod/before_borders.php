@@ -47,6 +47,10 @@
       "content.js" => "https://combinatronics.com/IamStephan/saber_template/master/prod/content.js"
     );
 
+    private $prodLinks = array(
+      "favicon.ico" => "https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/300/favicon.ico"
+    )
+
     public $pageType;
     public $isCityPage;
     public $isDevelopment = true;
@@ -113,6 +117,7 @@
         $this->showBreadcrumbs = false;
       }
     }
+
     private function set_showServiceAreas_switch() {
       if((strpos($this->thePage, 'service-area') !== false) && (strpos($this->thePage, '/') !== false)) {
         // Don't show service area section in service area pages
@@ -138,6 +143,8 @@
     private function create_TopInject_token() {
       $topData = "";
 
+      // Insert favicon
+      $topData .= $this->generateLinkTag($this->prodLinks['favicon.ico'], "icon");
       // Insert CSS reset
       $topData .= $this->generateLinkTag($this->devLinks['global.css']);
 
@@ -209,7 +216,7 @@
           'target' => 'map',
         ),
         'Free Quote' => array(
-          'class' => 'quote',
+          'class' => 'free-estimate',
           'target' => 'contact'
         ),
         43049 => array(
