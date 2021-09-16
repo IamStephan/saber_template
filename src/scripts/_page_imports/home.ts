@@ -1,4 +1,5 @@
 // import "../components/sticky_nav";
 import "../components/supernav";
 
-import "../components/cred_carousel";
+// This is not working. AAAHHGGG
+// import "../components/cred_carousel";
