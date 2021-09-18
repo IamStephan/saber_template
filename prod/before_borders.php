@@ -132,6 +132,7 @@
       } else if($this->substr_in_array($macroPages, $thePage)) {
         $this->pageType = 'CONTENT';
       } else {
+        // This should be UKNOWN
         $this->pageType = 'CONTENT';
       }
     }
@@ -346,7 +347,16 @@
      * UTILITIES
      * =======================
      */
-    // Returns true when there is a substr match inside an array
+    
+    /**
+     * Returns true when there is a substr match inside an array
+     * 
+     * NOTE:
+     * ====
+     * The naming of this utility is not consistent with the rest of
+     * the naming convention. It's more of an extension of php's built-in
+     * functions. So it made more sense to keep to that convention and not to mine
+     */
     function substr_in_array($haystack, $needle) {
       for($i = 0; $i < count($haystack); $i++) {
         $string_pos = strpos($needle, $haystack[$i]);
@@ -390,6 +400,12 @@
     // e.g. "some-nice-text" => "Some Nice Text"
     function convertToTitleCase($stringData) {
       return ucwords(str_replace("-", " ", $stringData));
+    }
+
+    function getSVGFromCDN($svgName) {
+      $baseUrl = 'https://cdn.treehouseinternetgroup.com/cms_images/755/';
+
+      echo file_get_contents($baseUrl . $svgName);
     }
   };
 ?>

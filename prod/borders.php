@@ -220,13 +220,17 @@
 
             <div class="features-items">
               <div class="feature-item">
-                <div class="item-icon"></div>
+                <div class="item-icon">
+                  <?= $siteConfig->getSVGFromCDN("years-badge.svg"); ?>
+                </div>
 
                 <div class="item-text">Privately-owned & locally- operated for more than 30 years</div>
               </div>
 
               <div class="feature-item">
-                <div class="item-icon"></div>
+                <div class="item-icon">
+                <?= $siteConfig->getSVGFromCDN("ribbon-icon.svg"); ?>
+                </div>
 
                 <div class="item-text">Privately-owned & locally- operated for more than 30 years</div>
               </div>
