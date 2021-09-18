@@ -42,7 +42,7 @@
       }
 
       .features-items {
-        @apply grid grid-cols-2 gap-14
+        @apply grid grid-cols-2 gap-20
           md:gap-8
           sm:grid-cols-1;
 
@@ -52,8 +52,13 @@
           box-shadow: 0px 4px 37px #00000029;
 
           .item-icon {
-            @apply w-28 h-28 bg-primary rounded-full mb-6
+            @apply w-28 h-28 mb-6 relative
               sm:w-16 sm:h-16;
+
+            // This could be a img or svg depending on where its being deployed
+            .featured-item-icon {
+              @apply absolute inset-0 w-full h-full;
+            }
           }
 
           .item-text {
