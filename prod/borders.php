@@ -221,7 +221,7 @@
             <div class="features-items">
               <div class="feature-item">
                 <div class="item-icon">
-                  <?= $siteConfig->getSVGFromCDN("years-badge.svg"); ?>
+                  <?= $siteConfig->getFileFromCDN("years-badge-prod.svg"); ?>
                 </div>
 
                 <div class="item-text">Privately-owned & locally- operated for more than 30 years</div>
@@ -229,7 +229,7 @@
 
               <div class="feature-item">
                 <div class="item-icon">
-                <?= $siteConfig->getSVGFromCDN("ribbon-icon.svg"); ?>
+                <?= $siteConfig->getFileFromCDN("ribbon-icon-prod.svg"); ?>
                 </div>
 
                 <div class="item-text">Privately-owned & locally- operated for more than 30 years</div>
