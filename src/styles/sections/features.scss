@@ -56,7 +56,9 @@
               sm:w-16 sm:h-16;
 
             // This could be a img or svg depending on where its being deployed
-            .featured-item-icon {
+            .featured-item-icon,
+            img,
+            svg {
               @apply absolute inset-0 w-full h-full;
             }
           }
