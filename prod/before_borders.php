@@ -402,10 +402,10 @@
       return ucwords(str_replace("-", " ", $stringData));
     }
 
-    function getSVGFromCDN($svgName) {
+    function getFileFromCDN($fileName) {
       $baseUrl = 'https://cdn.treehouseinternetgroup.com/cms_images/755/';
 
-      echo file_get_contents($baseUrl . $svgName);
+      echo file_get_contents($baseUrl . $fileName);
     }
   };
 ?>
