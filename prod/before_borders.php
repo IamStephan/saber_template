@@ -64,14 +64,14 @@
     );
     private $devLinks = array(
       // Css files
-      "global.css" => "https://combinatronics.com/IamStephan/saber_template/master/prod/global.css",
-      "home.css" => "https://combinatronics.com/IamStephan/saber_template/master/prod/home.css",
-      "content.css" => "https://combinatronics.com/IamStephan/saber_template/master/prod/content.css",
+      "global.css" => "https://gh-proxy.jsiwicki.workers.dev/?url=https://raw.githubusercontent.com/bs-production/saber-template/master/prod/global.css",
+      "home.css" => "https://gh-proxy.jsiwicki.workers.dev/?url=https://raw.githubusercontent.com/bs-production/saber-template/master/prod/home.css",
+      "content.css" => "https://gh-proxy.jsiwicki.workers.dev/?url=https://raw.githubusercontent.com/bs-production/saber-template/master/prod/content.css",
 
       // JS Files
-      "dev_tools.js" => "https://combinatronics.com/IamStephan/saber_template/master/prod/dev_tools.js",
-      "home.js" => "https://combinatronics.com/IamStephan/saber_template/master/prod/home.js",
-      "content.js" => "https://combinatronics.com/IamStephan/saber_template/master/prod/content.js"
+      "dev_tools.js" => "https://gh-proxy.jsiwicki.workers.dev/?url=https://raw.githubusercontent.com/bs-production/saber-template/master/prod/dev_tools.js",
+      "home.js" => "https://gh-proxy.jsiwicki.workers.dev/?url=https://raw.githubusercontent.com/bs-production/saber-template/master/prod/home.js",
+      "content.js" => "https://gh-proxy.jsiwicki.workers.dev/?url=https://raw.githubusercontent.com/bs-production/saber-template/master/prod/content.js"
     );
     private $prodLinks = array(
       "favicon.ico" => "https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/300/favicon.ico",
